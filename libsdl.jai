@@ -161,7 +161,7 @@ SDL_MessageBoxColor :: struct #foreign {
 };
 
 SDL_MessageBoxColorScheme :: struct #foreign {
-	colors : SDL_MessageBoxColor[5];
+	colors : [5] SDL_MessageBoxColor;
 };
 
 SDL_MessageBoxData :: struct #foreign {
@@ -194,7 +194,7 @@ SDL_GL_DeleteContext :: (context : SDL_GLContext) -> void #foreign;
 SDL_GL_ExtensionSupported :: (extension : string) -> SDL_bool #foreign;
 SDL_GL_GetAttribute :: (attr : SDL_GLattr, value : *int) -> int #foreign;
 SDL_GL_GetCurrentContext :: () -> SDL_GLContext #foreign;
-SDL_GL_GetCurrentWindow :: () ->*SDL_Window #foreign;
+SDL_GL_GetCurrentWindow :: () -> *SDL_Window #foreign;
 SDL_GL_GetDrawableSize :: (window : *SDL_Window, w : *int, h : *int) -> void #foreign;
 SDL_GL_GetDrawableSize :: (window : *SDL_Window) -> int, int
 {
